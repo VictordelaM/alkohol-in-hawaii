@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../../../components/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(../../../components/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+
+
+h2 {
+    color: #262B46;
+    font-family: Playfair Display;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 86px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: left;
+    width: 540px;
+    height: 74px;
+    top: 360px;
+    left: 48px;
+
+
+}
+
+input {
+    width: 20vw;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0px;
+    text-align: left;
+
+
+    input[name="name"] {
+        background-color: #6FC3DF;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="category"] {
+        background-color: #8D82C4;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="imageURL"] {
+        background-color: #EC8D81;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="instructions"] {
+        background-color: #E7B788;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="ingredient1"] {
+        background-color: #8EA9E8;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="quantity1"] {
+        background-color: #87C5A4;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="ingredient2"] {
+        background-color: #6FC3DF;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="quantity2"] {
+        background-color: #8D82C4;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="ingredient3"] {
+        background-color: #EC8D81;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    input[name="quantity3"] {
+        background-color: #E7B788;
+        color: #262B46;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+
+    button {
+        width: 20vw;
+        background-color: #6FC3DF;
+        color: #262B46;
+        cursor: pointer;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: center;
+
+    }

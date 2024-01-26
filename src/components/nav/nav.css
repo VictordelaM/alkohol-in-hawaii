@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+
+h3 {
+    color: #FFF;
+    width: 82px;
+    height: 52px;
+    left: 890px;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 52px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+h4 {
+    color: #FFF;
+    width: 161px;
+    height: 22px;
+    top: 15px;
+    left: 24px;
+    font-family: Playfair Display;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 4px;
+    text-align: left;
+}
