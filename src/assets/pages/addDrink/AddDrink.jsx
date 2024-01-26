@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Nav2 from '../../../components/nav/Nav2'
 import Footer from '../../../components/footer/Footer'
 import './addDrink.css'
-import { useDataContext } from '../../DataContext';
+// import { useDataContext } from '../../DataContext';
 
 function AddDrink() {
   const { addDrink } = useDataContext();
