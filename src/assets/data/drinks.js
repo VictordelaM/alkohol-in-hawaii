@@ -1,5 +1,5 @@
-{
-    "drinks": [
+const farhadArray=[
+    "drinks" [
         {
             "idDrink": "15423",
             "strDrink": "110 in the shade",
@@ -8741,4 +8741,6 @@
         ]
 
 
-}
+    ]
+
+export default farhadArray
