@@ -100,7 +100,7 @@ function AddDrink() {
         />
         {/* Menge Zutat 1 */}
         <input
-          type="text"
+          type="number"
           placeholder="Menge Zutat 1"
           value={formData.quantity1}
           onChange={(e) => handleInputChange('quantity1', e.target.value)}
