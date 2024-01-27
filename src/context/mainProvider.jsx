@@ -31,9 +31,11 @@ const MainProvider = ({children}) => {
         
     }, [category])
 
+
+
     useEffect(()=> {
         const idFetch = async() => {
-            const resp = await axios.get(`www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idCocktails}`)
+            const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idCocktails}`)
             setDetailCocktail(resp.data.drinks)
             console.log("ausgabe detail", detailCocktail);
         }

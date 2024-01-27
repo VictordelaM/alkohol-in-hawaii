@@ -4,11 +4,11 @@ import CocktailCard from '../../components/cocktailCard/CocktailCard'
 
 
 const NonalcoholicList = () => {
-    const {nonalcoholicCocktails, setNonalcoholicCocktails} = useContext(mainContext)
+    const { nonalcoholicCocktails, setNonalcoholicCocktails } = useContext(mainContext)
     return (
         <>
             {nonalcoholicCocktails.map((cocktail, index) => {
-                return(
+                return (
                     <div key={index}>
                         <CocktailCard
                             cocktail={cocktail}

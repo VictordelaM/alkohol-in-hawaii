@@ -3,14 +3,13 @@ import { mainContext } from '../../context/mainProvider'
 let counter = 0
 
 const CocktailCard = ({cocktail}) => {
+  const {idCocktails, setIdCocktails} = useContext(mainContext)
     // const {idFetch} = useContext(mainContext)
-    const [id, setId] = useState()
-    console.log("id", id);
     counter++
     if(counter % 2 !== 0) {
         return (
             <>
-                <button onClick={() => setId(cocktail.idDrink)}>
+                <button onClick={() => setIdCocktails(cocktail.idDrink)}>
                     <img src={cocktail.strDrinkThumb} alt="" />
                     <h2>{cocktail.strDrink}</h2>
                 </button>
@@ -19,7 +18,7 @@ const CocktailCard = ({cocktail}) => {
     } else {
         return (
             <>
-                <button onClick={() => setId(cocktail.idDrink)}>
+                <button onClick={() => setIdCocktails(cocktail.idDrink)}>
                     <h2>{cocktail.strDrink}</h2>
                     <img src={cocktail.strDrinkThumb} alt="" />
                 </button>
