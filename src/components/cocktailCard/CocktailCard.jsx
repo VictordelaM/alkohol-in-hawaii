@@ -1,30 +1,41 @@
-import React, { useContext, useState } from 'react'
-import { mainContext } from '../../context/mainProvider'
-let counter = 0
+import React, { useContext, useState } from 'react';
+import { mainContext } from '../../context/mainProvider';
+import { Popup } from 'reactjs-popup';
 
-const CocktailCard = ({cocktail}) => {
-  const {idCocktails, setIdCocktails} = useContext(mainContext)
-    // const {idFetch} = useContext(mainContext)
-    counter++
-    if(counter % 2 !== 0) {
-        return (
-            <>
-                <button onClick={() => setIdCocktails(cocktail.idDrink)}>
-                    <img src={cocktail.strDrinkThumb} alt="" />
-                    <h2>{cocktail.strDrink}</h2>
-                </button>
-            </>
-        )
-    } else {
-        return (
-            <>
-                <button onClick={() => setIdCocktails(cocktail.idDrink)}>
-                    <h2>{cocktail.strDrink}</h2>
-                    <img src={cocktail.strDrinkThumb} alt="" />
-                </button>
-            </>
-        )
-    }
-}
+let counter = 0;
 
-export default CocktailCard
+const CocktailCard = ({ cocktail }) => {
+  const { idCocktails, setIdCocktails } = useContext(mainContext);
+  counter++;
+
+  return (
+    <>
+      <Popup
+        trigger={
+          <button onClick={() => setIdCocktails(cocktail.idDrink)}>
+            <img src={cocktail.strDrinkThumb} alt="" />
+            <h2>{cocktail.strDrink}</h2>
+          </button>
+        }
+        modal
+        nested
+      >
+        {(close) => (
+          <div className="modal">
+            <button className="close" onClick={close}>
+              &times;
+            </button>
+            <div className="header">Modal Title</div>
+            <div className="content">
+              <img src={cocktail.strDrinkThumb} alt="" />
+              <h2>{cocktail.strDrink}</h2>
+              {/* Hier kannst du weitere Inhalte des Popups hinzufügen */}
+            </div>
+          </div>
+        )}
+      </Popup>
+    </>
+  );
+};
+
+export default CocktailCard;
