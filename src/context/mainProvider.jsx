@@ -11,20 +11,34 @@ const MainProvider = ({children}) => {
     const [nonalcoholicCocktails, setNonalcoholicCocktails] = useState([])
     const [idCocktails, setIdCocktails] = useState([])
     const [idIngridients, setIdIngridients] = useState([])
+    const [detailCocktail, setDetailCocktail] = useState([])
     // const idArray = []
     // const [cocktailArray, setCocktailArray] = useState([])
     const [category, setCategory] = useState("")
     console.log(category);
 
+    let link = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${category}`
+    console.log(link);
+    
     useEffect(() => {
         const apiFetch = async() => {
-            const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${category}`)
+            
+            const resp = await axios.get(link)
             setCategoryCocktails(resp.data.drinks)
             console.log("Ausgabe resp", resp.data.drinks);
         }
-        apiFetch()
+        { category ? apiFetch() : null}
+        
     }, [category])
 
+    useEffect(()=> {
+        const idFetch = async() => {
+            const resp = await axios.get(`www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idCocktails}`)
+            setDetailCocktail(resp.data.drinks)
+            console.log("ausgabe detail", detailCocktail);
+        }
+        { idCocktails ? idFetch() : null}
+    },[idCocktails])
     // useEffect(() => {
     //     const apiFetch = async() => {
     //         const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin`)
