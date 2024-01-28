@@ -1,0 +1,45 @@
+img {
+    width: 20rem;
+    height: fit-content;
+}
+
+.listH2 {
+    font-family: 'Monsterrat';
+    color: white;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.cards {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    writing-mode: vertical-lr;
+    border: none;
+    background-color: transparent;
+    padding: 0 5rem;
+}
+
+.buttonRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    writing-mode: vertical-lr;
+    border: none;
+    background-color: transparent;
+    padding: 0 5rem;
+}
+
+.buttonRight h2 {
+    transform: rotate(-180deg);
+}

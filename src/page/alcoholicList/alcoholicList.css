@@ -1,0 +1,31 @@
+
+
+.listing {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.parentCard:nth-child(6n+1) {
+    background-color: rgba(111, 195, 223, 1);
+}
+
+.parentCard:nth-child(6n+2) {
+    background-color: rgba(141, 130, 196, 1);
+}
+
+.parentCard:nth-child(6n+3) {
+    background-color: rgba(236, 141, 129, 1);
+}
+
+.parentCard:nth-child(6n+4) {
+    background-color: rgba(231, 183, 136, 1);
+}
+
+.parentCard:nth-child(6n+5) {
+    background-color: rgba(142, 169, 232, 1);
+}
+
+.parentCard:nth-child(6n+6) {
+    background-color: rgba(135, 197, 164, 1);
+}
+

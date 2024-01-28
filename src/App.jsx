@@ -4,7 +4,6 @@ import './App.css'
 import Home from './page/home/Home'
 import CocktailListRandom from './page/cocktailListRandom/CocktailListRandom'
 import NonalcoholicList from './page/nonalcoholicList/NonalcoholicList'
-import CocktailDetails from './page/cocktailDetails/CocktailDetails'
 import AlcoholicList from './page/alcoholicList/AlcoholicList'
 import SearchList from './page/searchList/SearchList'
 
