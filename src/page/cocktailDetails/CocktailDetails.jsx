@@ -2,10 +2,14 @@ import React, { useContext } from 'react'
 import { mainContext } from '../../context/mainProvider'
 
 
-const CocktailDetails = () => {
-    const {detailCocktail, setDetailCocktail} = useContext(mainContext)
+const CocktailDetails = ({cocktail}) => {
+  const{detailCocktail, setDetailCocktail} = useContext(mainContext)
+  console.log("cock", detailCocktail)
+  
   return (
-    <div></div>
+    <div>
+      <img src="" alt="" />
+    </div>
   )
 }
 
