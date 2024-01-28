@@ -9,7 +9,11 @@ const MainProvider = ({children}) => {
     const [nonalcoholicCocktails, setNonalcoholicCocktails] = useState([])
     const [idCocktails, setIdCocktails] = useState([])
     const [detailCocktail, setDetailCocktail] = useState([])
+    const [searchInput, setSearchInput] = useState([])
+    const [searchOutput, setSearchOutput] = useState([])
+    const [check, setCheck] = useState(false)
     const [category, setCategory] = useState("")
+
 
     let link = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${category}`
     
@@ -24,7 +28,7 @@ const MainProvider = ({children}) => {
     }, [category])
 
 
-
+// ! Wieso funktioniert das nicht?????????????????? Farid mach
     useEffect(()=> {
         const idFetch = async() => {
             const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idCocktails}`)
@@ -33,9 +37,8 @@ const MainProvider = ({children}) => {
             console.log("ausgabe detail", detailCocktail);
             console.log("johanna will so", idCocktails)
         }
-        { idCocktails ? idFetch() : null}
-    },[idCocktails])
-
+        { check ? idFetch() : null}
+    },[check])
 
 
     useEffect(() => {
@@ -46,8 +49,16 @@ const MainProvider = ({children}) => {
         apiFetch()
     }, [])
 
+    useEffect(() => {
+        const apiFetch = async() => {
+            const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`)
+            setSearchOutput(resp.data.drinks)
+            console.log("Test", searchOutput);
+        }
+        { searchInput ? apiFetch() : null}
+    }, [searchInput])
 
-    // ! Fetch für veraltete NonalcoholicList
+    // ! Fetch für NonalcoholicList
 
     useEffect(() => {
         const apiFetch = async() => {
@@ -61,7 +72,7 @@ const MainProvider = ({children}) => {
 
     return (
         <>
-            <mainContext.Provider value={{categoryCocktails, setCategoryCocktails, randomCocktails, setRandomCocktails, nonalcoholicCocktails, setNonalcoholicCocktails, idCocktails, setIdCocktails, category, setCategory, detailCocktail, setDetailCocktail}}>
+            <mainContext.Provider value={{searchInput, setSearchInput, searchOutput, setSearchOutput, check, setCheck, categoryCocktails, setCategoryCocktails, randomCocktails, setRandomCocktails, nonalcoholicCocktails, setNonalcoholicCocktails, idCocktails, setIdCocktails, category, setCategory, detailCocktail, setDetailCocktail}}>
                 {children}
             </mainContext.Provider>
         </>

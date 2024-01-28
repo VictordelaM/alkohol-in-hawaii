@@ -4,10 +4,11 @@ import { mainContext } from '../../context/mainProvider'
 
 
 const Home = () => {
-    const {category, setCategory} = useContext(mainContext)
+    const {category, setCategory, setSearchInput} = useContext(mainContext)
 
     return (
         <>  
+            <Link to='/searchresult'><button onClick={() => setSearchInput("ma")}></button></Link>
             <Link to='/gincocktails'><button onClick={() => setCategory("Gin")}>Gin</button></Link>
             <Link to='/vodkacocktails'><button onClick={() => setCategory("Vodka")}>Vodka</button></Link>
             <Link to='/rumcocktails'><button onClick={() => setCategory("Rum")}>Rum</button></Link>

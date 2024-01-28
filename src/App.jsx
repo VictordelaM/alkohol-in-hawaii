@@ -6,6 +6,7 @@ import CocktailListRandom from './page/cocktailListRandom/CocktailListRandom'
 import NonalcoholicList from './page/nonalcoholicList/NonalcoholicList'
 import CocktailDetails from './page/cocktailDetails/CocktailDetails'
 import AlcoholicList from './page/alcoholicList/AlcoholicList'
+import SearchList from './page/searchList/SearchList'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/searchresult' element={<SearchList/>}/>
         <Route path='/gincocktails' element={<AlcoholicList/>}/>
         <Route path='/vodkacocktails' element={<AlcoholicList/>}/>
         <Route path='/rumcocktails' element={<AlcoholicList/>}/>

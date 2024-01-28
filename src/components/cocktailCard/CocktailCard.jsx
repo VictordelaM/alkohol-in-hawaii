@@ -5,15 +5,20 @@ import CocktailDetails from '../../page/cocktailDetails/CocktailDetails';
 
 let counter = 0;
 const CocktailCard = ({ cocktail }) => {
-  const { idCocktails, setIdCocktails } = useContext(mainContext);
+  const { idCocktails, setIdCocktails, check, setCheck } = useContext(mainContext);
+
   console.log("cocktail", cocktail.idDrink)
+
+ 
+
+
   counter++;
 if (counter % 2 !== 0){
   return (
     <>
       <Popup
         trigger={
-          <button onClick={() => setIdCocktails(cocktail.idDrink)}>
+          <button onClick={() => {setIdCocktails(cocktail.idDrink), setCheck(true)}}>
             <img src={cocktail.strDrinkThumb} alt="" />
             <h2>{cocktail.strDrink}</h2>
           </button>
@@ -42,7 +47,7 @@ if (counter % 2 !== 0){
       <>
         <Popup
           trigger={
-            <button onClick={() => setIdCocktails(cocktail.idDrink)}>
+            <button onClick={() => {setIdCocktails(cocktail.idDrink), setCheck(true)}}>
               <h2>{cocktail.strDrink}</h2>
               <img src={cocktail.strDrinkThumb} alt="" />
             </button>
