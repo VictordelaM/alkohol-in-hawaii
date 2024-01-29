@@ -1,20 +1,18 @@
 import React, { useContext } from 'react'
 import { mainContext } from '../../context/mainProvider'
+import './cocktailListRandom.css'
 
 const CocktailListRandom = () => {
     const {randomCocktails, setRandomCocktails} = useContext(mainContext)
-    console.log(randomCocktails[0].strDrink);
-    // const randomCocktail = [...randomCocktails]
+    console.log("randomCocktail", randomCocktails);
+  
     const array = []
     
     for(let i=1; i<=15; i++) {
-      if (randomCocktails[0][`strIngredient${i}`] !== null) {
-        console.log("check");
-        array.push([randomCocktails[0][`strMeasure${i}`], randomCocktails[0][`strIngredient${i}`]])
-        
+      if (randomCocktails?.[0][`strIngredient${i}`] !== null) {
+        array.push([randomCocktails?.[0][`strMeasure${i}`], randomCocktails?.[0][`strIngredient${i}`]])
       }
     }
-    console.log(array);
     
   return (
     <>
@@ -22,11 +20,11 @@ const CocktailListRandom = () => {
     ? (
       <section>
         <img src={randomCocktails?.[0].strDrinkThumb} alt="" />
-        <div>
+        <div className='random'>
           <h2>{randomCocktails?.[0].strDrink}</h2>
           <h3>Zutaten</h3>
           <ul>
-          {array.map((data, index) => {
+          {array?.map((data, index) => {
             return(
               <li key={index}>{data?.[0]} {data?.[1]}</li>
             )
@@ -38,7 +36,6 @@ const CocktailListRandom = () => {
     )
     : (<p>Loading...</p>)
     }
-      
     </>
   )
 }

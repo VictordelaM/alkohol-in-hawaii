@@ -5,14 +5,15 @@ export const mainContext = createContext()
 
 const MainProvider = ({children}) => {
     const [categoryCocktails, setCategoryCocktails] = useState([])
-    const [randomCocktails, setRandomCocktails] = useState([])
+    const [randomCocktails, setRandomCocktails] = useState()
     const [nonalcoholicCocktails, setNonalcoholicCocktails] = useState([])
-    const [idCocktails, setIdCocktails] = useState([])
+    const [idCocktails, setIdCocktails] = useState("")
     const [detailCocktail, setDetailCocktail] = useState([])
     const [searchInput, setSearchInput] = useState([])
     const [searchOutput, setSearchOutput] = useState([])
     const [check, setCheck] = useState(false)
     const [category, setCategory] = useState("")
+    console.log("idCocktails", idCocktails);
 
 
     let link = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${category}`
@@ -29,17 +30,18 @@ const MainProvider = ({children}) => {
 
 
 // ! Wieso funktioniert das nicht?????????????????? Farid mach
-    useEffect(()=> {
-        const idFetch = async() => {
-            const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idCocktails}`)
-            setDetailCocktail(resp.data.drinks)
-            console.log(resp.data.drinks)
-            console.log("ausgabe detail", detailCocktail);
-            console.log("johanna will so", idCocktails)
-        }
-        { check ? idFetch() : null}
-    },[check])
 
+useEffect(()=> {
+    const idFetch = async() => {
+        const resp = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idCocktails}`)
+        setDetailCocktail(resp.data.drinks)
+        console.log(resp.data.drinks)
+        console.log("ausgabe detail", detailCocktail);
+        console.log("johanna will so", idCocktails)
+        console.log("check", check);
+    }
+   {idCocktails ? idFetch() : null}
+  },[idCocktails])
 
     useEffect(() => {
         const apiFetch = async() => {
