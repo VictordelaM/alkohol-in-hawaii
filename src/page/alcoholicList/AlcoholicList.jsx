@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import { mainContext } from '../../context/mainProvider'
 import CocktailCard from '../../components/cocktailCard/CocktailCard'
 import './alcoholicList.css'
+import Popup from '../../components/popup/Popup'
 
 const AlcoholicList = () => {
-    const { categoryCocktails} = useContext(mainContext)
+    const { categoryCocktails, active} = useContext(mainContext)
 
     return (
         <div className='listing'>
@@ -17,6 +18,7 @@ const AlcoholicList = () => {
                     </div>
                 )
             })}
+            <Popup className = {active ? "show" : "hide"}/>
         </div>
     )
 }

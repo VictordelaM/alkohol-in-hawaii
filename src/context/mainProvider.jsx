@@ -13,6 +13,7 @@ const MainProvider = ({children}) => {
     const [searchOutput, setSearchOutput] = useState([])
     const [check, setCheck] = useState(false)
     const [category, setCategory] = useState("")
+    const [active , setActive] = useState(false)
     console.log("idCocktails", idCocktails);
     console.log("ausgabe detailNEU", detailCocktail);
 
@@ -75,7 +76,7 @@ useEffect(()=> {
 
     return (
         <>
-            <mainContext.Provider value={{searchInput, setSearchInput, searchOutput, setSearchOutput, check, setCheck, categoryCocktails, setCategoryCocktails, randomCocktails, setRandomCocktails, nonalcoholicCocktails, setNonalcoholicCocktails, idCocktails, setIdCocktails, category, setCategory, detailCocktail, setDetailCocktail}}>
+            <mainContext.Provider value={{active , setActive, searchInput, setSearchInput, searchOutput, setSearchOutput, check, setCheck, categoryCocktails, setCategoryCocktails, randomCocktails, setRandomCocktails, nonalcoholicCocktails, setNonalcoholicCocktails, idCocktails, setIdCocktails, category, setCategory, detailCocktail, setDetailCocktail}}>
                 {children}
             </mainContext.Provider>
         </>
