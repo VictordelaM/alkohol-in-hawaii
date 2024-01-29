@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Nav2() {
     return (
         <>
-            <div>
+            <div id='navDiv'>
             <Link to="/"><h4>DRINKS&CHILL</h4></Link>
                <h3>ADD DRINK</h3>
             </div>
