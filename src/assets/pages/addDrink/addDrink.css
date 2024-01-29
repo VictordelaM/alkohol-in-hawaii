@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Montserrat';
-    src: url(../../../components/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+    src: url(../../../assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: 'Playfair Display';
-    src: url(../../../components/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+    src: url(../../../assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf);
 }
 
 
 h2 {
-    color: #262B46;
+    color: #fff;
     font-family: Playfair Display;
     font-size: 32px;
     font-weight: 700;
@@ -36,7 +36,7 @@ input {
     text-align: left;
 }
 
-    input[name="name"] {
+    #input1 {
         background-color: #6FC3DF;
         color: #262B46;
         font-family: Montserrat;
@@ -45,10 +45,12 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
-
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
     }
 
-    input[name="category"] {
+    #input2 {
         background-color: #8D82C4;
         color: #262B46;
         font-family: Montserrat;
@@ -57,10 +59,12 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
-
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
     }
 
-    input[name="imageURL"] {
+    #input3 {
         background-color: #EC8D81;
         color: #262B46;
         font-family: Montserrat;
@@ -69,10 +73,12 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
-
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
     }
 
-    input[name="instructions"] {
+    #input4 {
         background-color: #E7B788;
         color: #262B46;
         font-family: Montserrat;
@@ -81,10 +87,12 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
-
+        border-radius: 9px;
+        height: 100px;
+        width: 30%;
     }
 
-    input[name="ingredient1"] {
+    #input5 {
         background-color: #8EA9E8;
         color: #262B46;
         font-family: Montserrat;
@@ -93,10 +101,12 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
-
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
     }
 
-    input[name="quantity1"] {
+    #input6 {
         background-color: #87C5A4;
         color: #262B46;
         font-family: Montserrat;
@@ -105,10 +115,12 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
-
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
     }
 
-    input[name="ingredient2"] {
+    #input7 {
         background-color: #6FC3DF;
         color: #262B46;
         font-family: Montserrat;
@@ -117,10 +129,12 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
-
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
     }
 
-    input[name="quantity2"] {
+    #input8 {
         background-color: #8D82C4;
         color: #262B46;
         font-family: Montserrat;
@@ -129,10 +143,12 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
-
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
     }
 
-    input[name="ingredient3"] {
+    #input9 {
         background-color: #EC8D81;
         color: #262B46;
         font-family: Montserrat;
@@ -141,10 +157,13 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
 
     }
 
-    input[name="quantity3"] {
+    #input10 {
         background-color: #E7B788;
         color: #262B46;
         font-family: Montserrat;
@@ -153,19 +172,29 @@ input {
         line-height: 14px;
         letter-spacing: 0px;
         text-align: left;
+        border-radius: 9px;
+        height: 30px;
+        width: 30%;
 
     }
 
-    button {
-        width: 20vw;
+    #input11 {
         background-color: #6FC3DF;
         color: #262B46;
         cursor: pointer;
         font-family: Montserrat;
-        font-size: 12px;
+        font-size: 1.2rem;
         font-weight: 700;
         line-height: 14px;
         letter-spacing: 0px;
         text-align: center;
+        height: 60px;
+        width: 30%;
+
+    }
+
+    #divForm{
+        display: flex;
+        flex-direction: column;
 
     }

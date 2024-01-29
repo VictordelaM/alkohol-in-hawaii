@@ -7,7 +7,7 @@ function Nav2() {
     return (
         <>
             <div>
-                <Link to="/"><h4>DRINKS&CHILL</h4></Link>
+            <Link to="/"><h4>DRINKS&CHILL</h4></Link>
                <h3>ADD DRINK</h3>
             </div>
         </>

@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import Nav2 from '../../../components/nav/Nav2'
-import Footer from '../../../components/footer/Footer'
-import './addDrink.css'
-// import { useDataContext } from '../../DataContext';
+// import Nav2 from '../../../components/nav/Nav2';
+import Footer from '../../../components/footer/Footer';
+import './addDrink.css';
+import { useMainContext } from '../../../context/mainProvider';
+import { Link } from 'react-router-dom';
+// import Nav from '../../../components/nav/Nav';
+import Nav2 from '../../../components/nav/Nav2';
 
 function AddDrink() {
-  const { addDrink } = useDataContext();
+  const { addDrink } = useMainContext();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -62,82 +65,88 @@ function AddDrink() {
       <div>
         <h2>Füge deine eigenen Getränke hinzu!</h2>
 
-        {/* Name */}
-        <input
-          type="text"
-          placeholder="Name"
-          value={formData.name}
-          onChange={(e) => handleInputChange('name', e.target.value)}
-        />
+        <div id='divForm'>
+          {/* Name */}
+          <input id='input1'
+            type="text"
+            placeholder="Name"
+            value={formData.name}
+            onChange={(e) => handleInputChange('name', e.target.value)}
+          />
 
-        {/* Kategorie */}
-        <input
-          type="text"
-          placeholder="Kategorie"
-          value={formData.category}
-          onChange={(e) => handleInputChange('category', e.target.value)}
-        />
-        {/* Bild URL */}
-        <input
-          type="text"
-          placeholder="Bild URL"
-          value={formData.imageURL}
-          onChange={(e) => handleInputChange('imageURL', e.target.value)}
-        />
-        {/* Anleitung */}
-        <input
-          type="text"
-          placeholder="Anleitung"
-          value={formData.instructions}
-          onChange={(e) => handleInputChange('instructions', e.target.value)}
-        />
-        {/* Zutat 1 */}
-        <input
-          type="text"
-          placeholder="Zutat 1"
-          value={formData.ingredient1}
-          onChange={(e) => handleInputChange('ingredient1', e.target.value)}
-        />
-        {/* Menge Zutat 1 */}
-        <input
-          type="number"
-          placeholder="Menge Zutat 1"
-          value={formData.quantity1}
-          onChange={(e) => handleInputChange('quantity1', e.target.value)}
-        />
-        {/* Zutat 2 */}
-        <input
-          type="text"
-          placeholder="Zutat 2"
-          value={formData.ingredient2}
-          onChange={(e) => handleInputChange('ingredient2', e.target.value)}
-        />
-        {/* Menge Zutat 2 */}
-        <input
-          type="text"
-          placeholder="Menge Zutat 2"
-          value={formData.quantity2}
-          onChange={(e) => handleInputChange('quantity2', e.target.value)}
-        />
-        {/* Zutat 3 */}
-        <input
-          type="text"
-          placeholder="Zutat 3"
-          value={formData.ingredient3}
-          onChange={(e) => handleInputChange('ingredient3', e.target.value)}
-        />
-        {/* Menge Zutat 3 */}
-        <input
-          type="text"
-          placeholder="Menge Zutat 3"
-          value={formData.quantity3}
-          onChange={(e) => handleInputChange('quantity3', e.target.value)}
-        />
+          {/* Kategorie */}
+          <input id='input2'
+            type="text"
+            placeholder="Kategorie"
+            value={formData.category}
+            onChange={(e) => handleInputChange('category', e.target.value)}
+          />
+          {/* Bild URL */}
+          <input id='input3'
+            type="text"
+            placeholder="Bild URL"
+            value={formData.imageURL}
+            onChange={(e) => handleInputChange('imageURL', e.target.value)}
+          />
+          {/* Anleitung */}
+          <input
+            id='input4'
+            type="text"
+            placeholder="Anleitung"
+            value={formData.instructions}
+            onChange={(e) => handleInputChange('instructions', e.target.value)}
+          />
+          {/* Zutat 1 */}
+          <input id='input5'
+            type="text"
+            placeholder="Zutat 1"
+            value={formData.ingredient1}
+            onChange={(e) => handleInputChange('ingredient1', e.target.value)}
+          />
+          {/* Menge Zutat 1 */}
+          <input id='input6'
+            type="text"
+            placeholder="Menge Zutat 1"
+            value={formData.quantity1}
+            onChange={(e) => handleInputChange('quantity1', e.target.value)}
+          />
+          {/* Zutat 2 */}
+          <input id='input7'
+            type="text"
+            placeholder="Zutat 2"
+            value={formData.ingredient2}
+            onChange={(e) => handleInputChange('ingredient2', e.target.value)}
+          />
+          {/* Menge Zutat 2 */}
+          <input id='input8'
+            type="text"
+            placeholder="Menge Zutat 2"
+            value={formData.quantity2}
+            onChange={(e) => handleInputChange('quantity2', e.target.value)}
+          />
+          {/* Zutat 3 */}
+          <input id='input9'
+            type="text"
+            placeholder="Zutat 3"
+            value={formData.ingredient3}
+            onChange={(e) => handleInputChange('ingredient3', e.target.value)}
+          />
+          {/* Menge Zutat 3 */}
+          <input id='input10'
+            type="text"
+            placeholder="Menge Zutat 3"
+            value={formData.quantity3}
+            onChange={(e) => handleInputChange('quantity3', e.target.value)}
+          />
 
-        <button onClick={handleSubmit}>Submit</button>
+          <button id='input11' onClick={handleSubmit}>Getränk hinzufügen</button>
+
+          {/* Beispiel für Link (falls erforderlich) */}
+          <Link to="/">zurück <span>DRINKS&CHILL</span> </Link>
+        </div>
       </div>
-
       <Footer />
+
     </>
   );
 }
