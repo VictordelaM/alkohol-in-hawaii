@@ -13,7 +13,7 @@ function Header3() {
         <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE</p>
     </div>
     
-    <Footer/>
+    {/* <Footer/> */}
     </>
 
   )

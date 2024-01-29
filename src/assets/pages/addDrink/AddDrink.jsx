@@ -6,6 +6,7 @@ import { useMainContext } from '../../../context/mainProvider';
 import { Link } from 'react-router-dom';
 // import Nav from '../../../components/nav/Nav';
 import Nav2 from '../../../components/nav/Nav2';
+import Header2 from '../../../components/header2/Header2';
 
 function AddDrink() {
   const { addDrink } = useMainContext();
@@ -61,7 +62,8 @@ function AddDrink() {
 
   return (
     <>
-      <Nav2 />
+      <Header2 />
+      
       <div>
         <h2>Füge deine eigenen Getränke hinzu!</h2>
 
